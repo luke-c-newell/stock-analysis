@@ -8,14 +8,26 @@ Steve has just graduated and is setting up a green energy stock portfolio using 
 ### Overview
 
 [The full code and dataset can be found here.](https://github.com/luke-c-newell/stock-analysis/blob/main/VBA_Challenge.xlsm) 
-### Analysis of Refactored Code
+### Analysis of Stock Performance and Script Execution Times
+
+![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png "VBA_Challenge_2017")
+
+![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png "VBA_Challenge_2018")
+
+
+![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/All_Stocks_Analysis_2017.png "All_Stocks_Analysis_2017")
+
+![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/All_Stocks_Analysis_2018.png "All_Stocks_Analysis_2018")
+
+
+### Comparison of Refactored Code to the Original Code 
 ```
 'Create a ticker Index
 Dim tickerIndex As Single
 
 tickerIndex = 0
 
-'Create three output arrays
+'Created three output arrays
 ReDim tickerVolumes(12) As Long
 ReDim tickerStartingPrices(12) As Single
 ReDim tickerEndingPrices(12) As Single
@@ -29,7 +41,7 @@ tickerVolumes(tickerIndex) = 0
 ''Loop over all the rows in the spreadsheet.
 For i = 2 To RowCount
     
-    'Increase volume for current ticker
+    'Increased volume for current ticker
 
             tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
     
@@ -64,9 +76,9 @@ For i = 0 To 11
 Next i
 ```
 
-![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png "VBA_Challenge_2017")
 
-### Analysis of Original Code
+
+
 
 ```
 'Loop through tickers
@@ -107,7 +119,7 @@ Next i
 Next i
 ```
 
-![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png "VBA_Challenge_2018")
+
 
 ### Challenges and Difficulties Encountered
 
