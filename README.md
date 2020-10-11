@@ -5,7 +5,7 @@ I am working with my client, Steve, who is looking to understand the relative fi
 Steve has just graduated and is setting up a green energy stock portfolio using seed money from his parents. His aim is to understand the total volume and yearly return of a group of stocks in order to invest the money wisely. He would also like the ability to expand the analysis to track additional stocks in the future, when more data is available.
 ## Results
 ### Analysis of Stock Performance and Script Execution Times
-[The full code and dataset can be found here.](https://github.com/luke-c-newell/stock-analysis/blob/main/VBA_Challenge.xlsm) 
+Below is the analysis of the stock data for the 12 named stocks Steve is looking to understand, in order to inform his decision on where to invest his seed capital. The stock data has been reviewed, as well as a comparison of a refactoring process that was completed to increase the efficiency of the code to enable future expansion of the analysis.  [The full code and dataset can be found here.](https://github.com/luke-c-newell/stock-analysis/blob/main/VBA_Challenge.xlsm) 
 #### Stock Performance in 2017 using Original Code
 Calendar year 2017 saw a strong performance across the majority of the stocks, with 4 of the stock tickers showing a return of over 100% (DQ, ENPH, FSLR and SEDG). Of the 12 stocks analyzed, 11 of the stocks increased in price. Only one of the stocks analyzed saw a loss, with TERP seeing a 7.2% reduction in value. SPWR and FSLR were the stocks with the highest Total Daily Volume while DQ was the lowest. The original script ran in 0.617 seconds for the 2017 data and used a nested loop to comb the dataset for each ticker in turn.
 
