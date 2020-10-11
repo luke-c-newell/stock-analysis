@@ -1,29 +1,32 @@
 # VBA Challenge
 ## Overview of Project
-I am working with my client, Steve, who is looking to understand the relative financial performance of green energy stocks. Using VBA, a scripting language based in Microsoft Excel, I have created an automated process to calculate the performance of multiple stocks over time. Using these algorithms, it is possible to compare the financial data and determine relative performance compared to historical data. Using VBA code to automate the analysis has significant benefits over traditional Excel formulas, due to the lower time needed to analyze the data and the reduced processing power required. 
+I am working with my client, Steve, who is looking to understand the relative financial performance of green energy stocks. Using VBA, a scripting language based in Microsoft Excel, I have created an automated process to calculate the performance of multiple stocks over time. Using these algorithms, it is possible to compare the financial results and determine relative performance compared to historical data. Using VBA code to automate the analysis has significant benefits over traditional Excel formulas, due to the lower time needed to analyze the data and the reduced processing power required. 
 ### Purpose
 Steve has just graduated and is setting up a green energy stock portfolio using seed money from his parents. His aim is to understand the total volume and yearly return of a group of stocks in order to invest the money wisely. 
 ## Results
-### Overview
-
-[The full code and dataset can be found here.](https://github.com/luke-c-newell/stock-analysis/blob/main/VBA_Challenge.xlsm) 
 ### Analysis of Stock Performance and Script Execution Times
+[The full code and dataset can be found here.](https://github.com/luke-c-newell/stock-analysis/blob/main/VBA_Challenge.xlsm) 
 #### Stock Performance in 2017 using Original Code
 Calendar year 2017 saw a strong performance across the majority of the stocks, with 4 of the stock tickers showing a return of over 100% (DQ, ENPH, FSLR and SEDG). Of the 12 stocks analyzed, 11 of the stocks increased in price. Only one of the stocks analyzed saw a loss, with TERP seeing a 7.2% reduction in value. SPWR and FSLR were the stocks with the highest Total Daily Volume while DQ was the lowest. The original script ran in 0.617 seconds for the 2017 data and used a nested loop to comb the dataset for each ticker in turn.
+
 ![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/All_Stocks_Analysis_2017.png "All_Stocks_Analysis_2017")
+
 #### Stock Performance in 2018 using Original Code
 Calendar year 2018 saw a readjustment in outcomes for the analyzed stocks, with only ENPH and RUN continuing to increase in price after 2017. Both of these stocks saw their Total Daily Volume increase since 2017 which provides a positive signal to consider these stocks for Steve's portfolio. The worst performing stock from 2017, TERP, also fell in price in 2018 and should be avoided as part of the portfolio. The original script ran in 0.617 seconds for the 2018 data, which is identical to the performance for the 2017 data.
+
 ![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/All_Stocks_Analysis_2018.png "All_Stocks_Analysis_2018")
 #### Stock Performance in 2017 using Refactored Code
 The stock performance results were identical when analyzing the data using the refactored code. The refactored script ran in 0.113 seconds for the 2017 data, which is over 0.5 seconds quicker than the original code.
+
 ![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png "VBA_Challenge_2017")
 #### Stock Performance in 2018 using Refactored Code
 The stock performance results were identical when analyzing the data using the refactored code. The refactored script ran in 0.109 seconds for the 2018 data, which is over 0.5 seconds quicker than the original code.
+
 ![alt text](https://github.com/luke-c-newell/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png "VBA_Challenge_2018")
 
 ### Comparison of Refactored Code to the Original Code 
 #### Original Code Sample
-To create the original code, I started by analyzing one specific ticker that was of particular interest to Steve, DQ. After creating the script for this ticker, I expanded the script to loop through the dataset multiple times, scanning for named tickers that were stored in the tickers() array. This original algorithm used a nested loop to output the data for each ticker individually, before moving on to the next one in the array. As this would not be the most efficient method for scaling the analysis, I determined that the code could be refactored to improve the time taken to output the results.
+To create the original code, I started by analyzing one specific ticker that was of particular interest to Steve, DQ. After creating the script for this ticker, I expanded the script to loop through the dataset multiple times, scanning for named tickers that were stored in the tickers() array. This original algorithm used a nested loop to output the data for each ticker individually, before moving on to the next ticker in the array. As this would not be the most efficient method for scaling the analysis, I determined that the code could be refactored to improve the time taken to output the results.
 ```
 'Loop through tickers
     For i = 0 To 11
@@ -119,7 +122,7 @@ For i = 0 To 11
 Next i
 ```
 ### Challenges and Difficulties Encountered
-I encountered an Overflow error (Runtime Error 6) when compiling the penultimate line of the refactored code. This occurred because the data type of the tickerIndex was different from that of the tickerStartingPrices and tickerEndingPrices arrays. Ensuring that the data type of the tickerIndex was the same as the other arrays allowed the code to compile correctly.
+I encountered an Overflow error (Runtime Error 6) when compiling the penultimate line of the refactored code shown in the sample above. This occurred because the data type of the tickerIndex was different from that of the tickerStartingPrices and tickerEndingPrices arrays. Ensuring that the data type of the tickerIndex was the same as the other arrays allowed the code to compile correctly.
 ## Summary
 Overall, I have been able to complete the analysis for my client, while increasing the speed and readability of the VBA code used to analyze the data. My client is now able to use this information to deepen their understanding of the green energy sector, enabling them to make more informed decisions on whether to invest in specific stocks. They will be able to more easily expand the code to track a wider number of stocks, over multiple years, while only increasing the performance time in proportion to the volume of input data.
 ### What are the advantages or disadvantages of refactoring code?
