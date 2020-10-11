@@ -2,7 +2,7 @@
 ## Overview of Project
 I am working with my client, Steve, who is looking to understand the relative financial performance of green energy stocks. Using VBA, a scripting language based in Microsoft Excel, I have created an automated process to calculate the performance of multiple stocks over time. Using these algorithms, it is possible to compare the financial results and determine relative performance compared to historical data. Using VBA code to automate the analysis has significant benefits over traditional Excel formulas, due to the lower time needed to analyze the data and the reduced processing power required. 
 ### Purpose
-Steve has just graduated and is setting up a green energy stock portfolio using seed money from his parents. His aim is to understand the total volume and yearly return of a group of stocks in order to invest the money wisely. 
+Steve has just graduated and is setting up a green energy stock portfolio using seed money from his parents. His aim is to understand the total volume and yearly return of a group of stocks in order to invest the money wisely. He would also like the ability to expand the analysis to track additional stocks in the future, when more data is available.
 ## Results
 ### Analysis of Stock Performance and Script Execution Times
 [The full code and dataset can be found here.](https://github.com/luke-c-newell/stock-analysis/blob/main/VBA_Challenge.xlsm) 
